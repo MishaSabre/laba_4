@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Person[] m = new Person[3];
+        Person[] m = new Person[2];
         Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < 2; i++){
             m[i] = new Person();
             System.out.println("Введите ID");
             m[i].setId(Integer.parseInt(scanner.nextLine()));
@@ -25,5 +25,6 @@ public class Main {
         for(Person a : mp.pers) System.out.println(a.getName());
         mp.sort("name");
         for(Person a : mp.pers) System.out.println(a.getName());
+        m[0].check("");
     }
 }

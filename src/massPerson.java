@@ -9,8 +9,8 @@ public class massPerson {
         switch (a) {
             case "id":
                 while (!sorted) {
+                    sorted = true;
                     for (int i = 0; i < pers.length - 1; i++) {
-                        sorted = true;
                         for (int j = 0; j < pers.length - 1; j++) {
                             if (pers[j].getId() > pers[j + 1].getId()) {
                                 buf = pers[j];
@@ -25,8 +25,8 @@ public class massPerson {
             case "name":
                 while (!sorted) {
                     int b = 0;
+                    sorted = true;
                     for (int i = 0; i < pers.length - 1; i++) {
-                        sorted = true;
                         for (int j = 0; j < pers.length - 1; j++) {
                             while (pers[j].getName().charAt(b) == pers[j + 1].getName().charAt(b)){
                                 b++;
@@ -35,12 +35,12 @@ public class massPerson {
                                 }
                             }
                             b = 0;
-                                if (pers[j].getName().charAt(b) > pers[j + 1].getName().charAt(b)) {
-                                    buf = pers[j];
-                                    pers[j] = pers[j + 1];
-                                    pers[j + 1] = buf;
-                                    sorted = false;
-                                }
+                            if (pers[j].getName().charAt(b) > pers[j + 1].getName().charAt(b)) {
+                                buf = pers[j];
+                                pers[j] = pers[j + 1];
+                                pers[j + 1] = buf;
+                                sorted = false;
+                            }
 
                         }
                     }
@@ -49,8 +49,8 @@ public class massPerson {
             case "surname":
                 while (!sorted) {
                     int b = 0;
+                    sorted = true;
                     for (int i = 0; i < pers.length - 1; i++) {
-                        sorted = true;
                         for (int j = 0; j < pers.length - 1; j++) {
                             while (pers[j].getName().charAt(b) == pers[j + 1].getName().charAt(b)){
                                 b++;
@@ -71,8 +71,8 @@ public class massPerson {
             break;
             case "mailInd":
                 while (!sorted) {
+                    sorted = true;
                     for (int i = 0; i < pers.length - 1; i++) {
-                        sorted = true;
                         for (int j = 0; j < pers.length - 1; j++) {
                             if (pers[j].getMailInd() > pers[j + 1].getMailInd()) {
                                 buf = pers[j];
@@ -86,8 +86,8 @@ public class massPerson {
             break;
             case "number":
                 while (!sorted) {
+                    sorted = true;
                     for (int i = 0; i < pers.length - 1; i++) {
-                        sorted = true;
                         for (int j = 0; j < pers.length - 1; j++) {
                             if (pers[j].getNumber() > pers[j + 1].getNumber()) {
                                 buf = pers[j];
