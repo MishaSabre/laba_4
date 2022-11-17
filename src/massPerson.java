@@ -23,19 +23,12 @@ public class massPerson {
                 }
                 break;
             case "name":
+            case "surname":
                 while (!sorted) {
-                    int b = 0;
                     sorted = true;
                     for (int i = 0; i < pers.length - 1; i++) {
                         for (int j = 0; j < pers.length - 1; j++) {
-                            while (pers[j].getName().charAt(b) == pers[j + 1].getName().charAt(b)){
-                                b++;
-                                if (b==pers[j].getName().length()-1 && pers[j].getName().charAt(b) == pers[j + 1].getName().charAt(b)){
-                                    j++;
-                                }
-                            }
-                            b = 0;
-                            if (pers[j].getName().charAt(b) > pers[j + 1].getName().charAt(b)) {
+                            if (pers[j].getSurname().compareTo(pers[j+1].getSurname()) < 0) {
                                 buf = pers[j];
                                 pers[j] = pers[j + 1];
                                 pers[j + 1] = buf;
@@ -46,29 +39,6 @@ public class massPerson {
                     }
                 }
                 break;
-            case "surname":
-                while (!sorted) {
-                    int b = 0;
-                    sorted = true;
-                    for (int i = 0; i < pers.length - 1; i++) {
-                        for (int j = 0; j < pers.length - 1; j++) {
-                            while (pers[j].getName().charAt(b) == pers[j + 1].getName().charAt(b)){
-                                b++;
-                                if (b==pers[j].getName().length()-1 && pers[j].getName().charAt(b) == pers[j + 1].getName().charAt(b)){
-                                    j++;
-                                }
-                            }
-                            b = 0;
-                            if (pers[j].getSurname().charAt(b) > pers[j + 1].getSurname().charAt(b)) {
-                                buf = pers[j];
-                                pers[j] = pers[j + 1];
-                                pers[j + 1] = buf;
-                                sorted = false;
-                            }
-                        }
-                    }
-                }
-            break;
             case "mailInd":
                 while (!sorted) {
                     sorted = true;
